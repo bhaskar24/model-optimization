@@ -23,7 +23,7 @@ import tensorflow as tf
 
 def assign(ref, value, name=None):
   if hasattr(tf, 'assign'):
-    return tf.assign(ref, value, name=name)
+    return tf.compat.v1.assign(ref, value, name=name)
   else:
     return ref.assign(value, name=name)
 
